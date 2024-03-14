@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QljbVoxcJ06Ipn+E67dr+0gJ9Krqzr4oeNmkFjU1qM8=",
+  "Source": "ClienteVendaApi",
+  "BasePath": "_content/ClienteVendaApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

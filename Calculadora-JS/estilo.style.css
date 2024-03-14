@@ -1,0 +1,140 @@
+/* Reseta de margem e preenchimento para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 18px Helvetica;
+}
+
+/* Estilos do corpo da página */
+body {
+    color: rgb(36, 36, 36);
+    background-color: #175CFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    display: flex;
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+    margin: 0px 0px 0px 10%;
+}
+
+.cabecalho {
+    margin: 10;
+    text-align: center;    
+}
+
+.cabecalho img {
+    margin-right: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilos para a seção da calculadora */
+section {
+    background-color: rgb(255, 255, 255);
+    width: 270px;
+    max-width: 80%; /* Defina a largura máxima desejada */
+    margin: auto; /* Centralize a calculadora horizontalmente */
+    padding: 30px 20px 30px 20px;
+    background-color: white;
+    color: rgb(31, 31, 31);
+    border-radius: 20px;
+    display: flex;  /* Define o estilo de layout como flexível (Flexbox) para o elemento body */
+    flex-direction: column; /* Define a direção do eixo principal do layout flexível como coluna */
+    text-align: center; 
+    box-shadow: 4px 4px 16px rgba(49, 49, 49, 0.534);
+}
+
+/* Estilos para a área de resultados */
+#resultado {
+    text-align: right;
+    margin-bottom: 18px;
+    height: 50px;
+    padding: 0.5em;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(48, 48, 48, 0.205);
+}
+
+#prever-resultado{
+    padding: 0.25em;
+    font-size: 0.75em;
+}
+
+/* Estilos para a operação atual em execução */
+#calculando {
+    padding: 0.375em;
+    font-size: 1.125em;
+    font-weight: 700;
+}
+
+/* Estilos para os botões na calculadora */
+.botao-numero{
+    width: 50px; /* Defina o tamanho desejado para todos os botões */
+    height: 45px; /* Defina a mesma altura dos botões */
+    padding: 0px;
+    margin: 6px;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);
+    cursor: pointer;
+}
+
+.botao-numeroigual {
+    grid-column: span 2;
+    height: 45px; /* Defina a mesma altura dos botões */
+    padding: 0px;
+    margin: 6px;
+    background-color: white;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px rgba(99, 99, 99, 0.315);
+    cursor: pointer;
+}
+
+.gradeBotao{
+    display: grid; /* Define o estilo de layout como uma grade (Grid) para o elemento com a classe .gradeBotao */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Especifica um modelo de grade com quatro colunas, cada uma ocupando uma fração igual do espaço disponível */
+    gap: 2px;  /* Define o espaçamento entre as células da grade */
+}
+
+.botao-numero:hover,
+.gradeBotao .botao-numeroigual:hover {
+    background-color: #175dffea;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 6px;
+    font: italic 12px Helvetica;
+    color: #175CFF;
+}
+
+/* Estilos para o rodapé */
+footer,
+a {
+    padding-top: 30px;
+    color: white;
+    text-align: center;
+    margin-block: 1em;
+    line-height: 1em;
+}
+
+h2 {
+    margin-block: 1em;
+}
+
+.politica {
+    color: white;
+    font-size: 14px;
+}

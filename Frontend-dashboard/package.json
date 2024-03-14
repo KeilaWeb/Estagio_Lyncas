@@ -1,0 +1,24 @@
+{
+  "name": "projeto_dev_junior",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.6",
+    "axios": "^1.6.7",
+    "big.js": "^6.2.1",
+    "core-js": "^3.8.3",
+    "maska": "^2.1.10",
+    "v-money3": "^3.24.0",
+    "vue": "^3.3.13",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.8"
+  }
+}
