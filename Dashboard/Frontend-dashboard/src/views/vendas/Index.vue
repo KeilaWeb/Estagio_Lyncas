@@ -6,8 +6,8 @@
   </MenuPrincipal>
   <div class="conteudo">
       <div class="cliente-geral">
-          <h2 class="texto-H2">Lista de vendas</h2>
-          <BuscaPesquisa :placeholder="tipoBusca"/>
+          <h2 class="texto-H2">Lista de vendas</h2>          
+          <BuscaPesquisa v-model="termoBusca" @buscarClientes="buscarVendas"/>
       </div>
     <div class="tabela-cliente">
       <table>
@@ -64,7 +64,8 @@ export default {
       classBotao: 'botao-verde',          
       tipoBusca: 'Buscar venda',
       rotaRedirecionamento: '',  
-      vendas: [],         
+      vendas: [], 
+              
     }
   },  
   emits: ["clientesVendas"],     

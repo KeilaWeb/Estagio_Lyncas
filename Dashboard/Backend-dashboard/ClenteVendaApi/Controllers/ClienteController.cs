@@ -26,16 +26,24 @@ namespace ClenteVendaApi.Controllers
         }
 
         [HttpPost]
-        [Route("paginacao")]
-        public async Task<ActionResult<List<Paginacao>>> PaginarClientesController([FromBody]Paginacao paginacao)
+        [Route("busca")]
+        public async Task<ActionResult> PaginarClientesController([FromBody]Paginacao paginacao)
         {
-            var (clientes, totalClientes) = await _serviceCliente.PaginarCliente(paginacao);
-            var data = new
+            try
             {
-                clientes,
-                totalClientes
-            };
-            return Ok(data);
+                var (clientes, totalClientes) = await _serviceCliente.PaginarCliente(paginacao);
+                var data = new
+                {
+                    clientes,
+                    totalClientes
+                };
+
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Erro ao paginar clientes: {ex.Message}");
+            }
         }
 
         [HttpGet("{id}")]

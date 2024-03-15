@@ -1,30 +1,47 @@
-<template>
-    <div>        
-        <div class="pesquisa-tabela-conteudo">            
-            <input type="text" class="pesquisa-tabela-conteudo"                  
-                :placeholder="tipoBusca" :class="{ 'erro-input': !preenchimentoValido }" >
-            <button>
-                <span class="material-icons">
-                    search
-                </span>                
-            </button>
-        </div>
+<template>       
+    <div class="pesquisa-tabela-conteudo">         
+        <input 
+            @keyup.enter="buscarClientes"
+            v-model="termoBusca" 
+            type="text" 
+            class="pesquisa-tabela-conteudo"                  
+            placeholder="Pesquisar..."
+            @input="emitValor"
+            :class="{ 'erro-input': !preenchimentoValido }" 
+        >
+        <button 
+            @click="buscarClientes">                
+            <span class="material-icons">
+                search
+            </span>                
+        </button>
     </div>
 </template>
   
 <script>
-    export default { 
-        name: 'BuscaPesquisa',
-        props: {
-            tipoBusca: { type: [Number, Date ,String], default: '' },
-            placeholder: { type: String, default: '' },
-        },
-        data() {
-            return{
-                preenchimentoValido: true,
-            }
+export default { 
+    name: 'BuscaPesquisa',
+    props: {
+        modelValue: { type: [Number, Date ,String], default: '' },
+    },
+    data() {
+        return{
+            preenchimentoValido: true,
+            termoBusca: '',
         }
-    }
+    },
+    methods: {
+        buscarClientes() {
+            this.$emit('buscarClientes');
+        },
+        emitValor(event) {
+            this.$emit('update:modelValue', event.target.value);
+        }
+    },
+    watch: {
+        modelValue: 'buscarClientes',
+    },
+}
 </script>
   
 <style scoped>

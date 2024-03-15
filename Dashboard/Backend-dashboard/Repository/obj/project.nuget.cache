@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dTmT31dYOjW8k9TlnM7Gh8l9xjQKtpml9c94f7R8t1hte/NH7AniFExY4QwASmW15U2ynmfT6p3MsFtraRv5vQ==",
+  "dgSpecHash": "BBhD1/Y+wEYqKSx6ReMOR7r8lyAQg7uSP1jvdSMhQaOO4MDjS74M4wDitCTr+55kq6ld1MDYQElTq9bs0+bRFA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\PROJETOS\\CRUD\\Repository\\Repository.csproj",
+  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

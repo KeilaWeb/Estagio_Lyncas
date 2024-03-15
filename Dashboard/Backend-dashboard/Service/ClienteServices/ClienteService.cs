@@ -20,9 +20,16 @@ namespace Service.ClienteServices
 
         public async Task<(List<ClienteBuscaTodos>, int)> PaginarCliente(Paginacao paginacao)
         {
-            var (clientesPaginados, totalClientes) = await _repositoryCliente.PaginarClientesRepo(paginacao);
-            var modelos = _mapper.Map<List<ClienteBuscaTodos>>(clientesPaginados);
-            return (modelos, totalClientes);
+            try
+            {
+                var (clientesPaginados, totalClientes) = await _repositoryCliente.PaginarClientesRepo(paginacao);
+                var clientes = _mapper.Map<List<ClienteBuscaTodos>>(clientesPaginados);
+                return (clientes, totalClientes);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Erro ao paginar clientes", ex);
+            }
         }
 
         public async Task DeletarClienteAsync(int id)

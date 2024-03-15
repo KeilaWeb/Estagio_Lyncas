@@ -1,8 +1,11 @@
 <template>
     <div>
         <label> {{ label }} </label>
-        <input type="Date" class="cliente-data" 
-          :class="{ 'erro-input': validarPreenchimento }" :value="formatarData(modelValue)" @input='enviarValorInput' />
+        <input type="Date" 
+          class="cliente-data" 
+          :class="{ 'erro-input': validarPreenchimento }" 
+          :value="formatarData(modelValue)" 
+          @input='enviarValorInput' />
         <div v-if="validarPreenchimento" class="erro-mensagem">{{ mensagemErro }}</div>
     </div>
 </template>  

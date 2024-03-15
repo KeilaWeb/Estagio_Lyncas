@@ -1,13 +1,13 @@
 <template>
   <MenuPrincipal>
     <template #botao-slot>
-      <BotaoBtn :class="classBotao" :nomeBotao='BotaoCabecalho' @click="botaoSuperior" />
+      <BotaoBtn class="botao-verde" :nomeBotao='BotaoCabecalho' @click="botaoSuperior" />
     </template>
   </MenuPrincipal>
   <div class="conteudo">
     <div class="cliente-geral">
       <h2 class="texto-H2">Lista de clientes</h2>
-      <BuscaPesquisa :placeholder="tipoBusca" />
+      <BuscaPesquisa v-model="termoBusca" @buscarClientes="buscarClientes"/>
     </div>
     <div class="tabela-cliente">
       <table id="tabelaClientes">
@@ -33,11 +33,7 @@
           </tr>
         </tbody>
       </table>
-      <div>
-        <div>
-          <TotalPaginas :totalClientes="totalClientes" :itensPorPagina="itensPorPagina" :paginaAtual="paginaAtual" @atualizar-pagina="atualizarPagina" />
-        </div>
-      </div>
+      <TotalPaginas :totalClientes="totalClientes" :itensPorPagina="itensPorPagina" :paginaAtual="paginaAtual" @atualizar-pagina="atualizarPagina" />
     </div>
   </div>
 </template>
@@ -61,13 +57,12 @@ export default {
     return {
       id: null,
       BotaoCabecalho: 'Cadastrar',
-      classBotao: 'botao-verde',
-      tipoBusca: 'Buscar clientes',
       rotaRedirecionamento: '',
       clientes: [],
       itensPorPagina: 5,
       paginaAtual: 1,
       totalClientes: 0,
+      termoBusca: '',
     };
   },
   methods: {    
@@ -78,6 +73,7 @@ export default {
       const  params = {
         paginaNumero: this.paginaAtual,
         paginaQuantidade: this.itensPorPagina,
+        busca: this.termoBusca,
       }
       await clienteService.enviarPaginado(params).then(response => 
       {

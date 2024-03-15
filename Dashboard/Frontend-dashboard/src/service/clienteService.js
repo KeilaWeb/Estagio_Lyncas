@@ -14,7 +14,7 @@ const clienteService = {
     },
 
     async enviarPaginado(form) {
-        let { data } = await ApiService.criar(`${apiBasePath}/paginacao`, form)
+        let { data } = await ApiService.criar(`${apiBasePath}/busca`, form)
         return data
     },
     
