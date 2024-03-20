@@ -12,7 +12,7 @@ using System.Security.Claims;
 namespace ClienteVendaApi.Controllers
 {
 
-    [Authorize(Policy = "SuperAdminOnly")]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase

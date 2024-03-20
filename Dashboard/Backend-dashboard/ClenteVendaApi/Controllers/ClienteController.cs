@@ -6,7 +6,7 @@ using Service.ClienteServices;
 namespace ClenteVendaApi.Controllers
 {
 
-    [Authorize(Policy = "AdminOnly")]
+    [Authorize]
     [Route("api/clientes")]
     [ApiController]
     public class ClienteController : ControllerBase
