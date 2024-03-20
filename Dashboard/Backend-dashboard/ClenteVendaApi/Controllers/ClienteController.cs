@@ -1,25 +1,27 @@
-﻿using AutoMapper;
-using Dominio.Models.DTO;
+﻿using Dominio.Models.DTO;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.ClienteServices;
 
 namespace ClenteVendaApi.Controllers
 {
+
+    [Authorize(Policy = "AdminOnly")]
     [Route("api/clientes")]
     [ApiController]
     public class ClienteController : ControllerBase
     {
-        public readonly IClienteService _serviceCliente;
+        public readonly IGenericService _serviceCliente;
         private readonly ILogger<ClienteController> _logger;
 
-        public ClienteController(IClienteService serviceCliente, ILogger<ClienteController> logger)
+        public ClienteController(IGenericService serviceCliente, ILogger<ClienteController> logger)
         {
             _serviceCliente = serviceCliente;
             _logger = logger;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ClienteDTO>>> BuscarClientesController()
+        public async Task<ActionResult<List<ClienteDTO>>> BuscarClientesController()
         {
             var clientes = await _serviceCliente.BuscarTodosServiceT();
             return Ok(clientes);
@@ -46,6 +48,7 @@ namespace ClenteVendaApi.Controllers
             }
         }
 
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<ClienteDTO>> BuscaClienteIdController(int id)
         {

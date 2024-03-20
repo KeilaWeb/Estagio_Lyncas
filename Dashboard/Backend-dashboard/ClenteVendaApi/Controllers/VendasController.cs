@@ -1,10 +1,12 @@
 ﻿using Dominio.Models.DTO;
 using Dominio.Models.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.VendaService;
 
 namespace ClenteVendaApi.Controllers
 {
+    [Authorize(Policy = "AdminOnly")]
     [Route("api/vendas")]
     [ApiController]
     public class VendasController : ControllerBase

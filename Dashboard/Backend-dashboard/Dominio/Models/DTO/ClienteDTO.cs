@@ -1,5 +1,4 @@
-﻿
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Dominio.Models.DTO
 {
@@ -13,5 +12,6 @@ namespace Dominio.Models.DTO
         public string Telefone { get; set; }
         [Required]
         public string CPF { get; set; }
+
     }
 }

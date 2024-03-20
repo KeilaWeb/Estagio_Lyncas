@@ -7,7 +7,7 @@ using Dominio.Models.ViewModelCliente;
 
 namespace Service.ClienteServices
 {
-    public class ClienteService : GenericService<Cliente, ClienteDTO, Cliente>, IClienteService
+    public class ClienteService : GenericService<Cliente, ClienteDTO, Cliente>, IGenericService
     {
         private readonly IClienteRepository _repositoryCliente;
         private readonly IMapper _mapper;

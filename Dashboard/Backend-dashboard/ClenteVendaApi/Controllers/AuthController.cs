@@ -11,6 +11,8 @@ using System.Security.Claims;
 
 namespace ClienteVendaApi.Controllers
 {
+
+    [Authorize(Policy = "SuperAdminOnly")]
     [Route("api/[controller]")]
     [ApiController]
     public class AuthController : ControllerBase
@@ -19,12 +21,83 @@ namespace ClienteVendaApi.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IConfiguration _configuration;
-        public AuthController(ITokenService tokenService, UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, IConfiguration configuration)
+        private readonly ILogger<AuthController> _logger;
+        public AuthController(ITokenService tokenService, UserManager<ApplicationUser> userManager, 
+                              RoleManager<IdentityRole> roleManager, IConfiguration configuration, ILogger<AuthController> logger)
         {
             _tokenService = tokenService;
             _userManager = userManager;
             _roleManager = roleManager;
             _configuration = configuration;
+            _logger = logger;
+        }
+
+        [HttpPost]
+        [Route("CriandoRole")]
+        public async Task<IActionResult> CreateRole(string roleName)
+        {
+            try
+            {
+                var roleExist = await _roleManager.RoleExistsAsync(roleName);
+                if (!roleExist)
+                {
+                    var roleResult = await _roleManager.CreateAsync(new IdentityRole(roleName));
+                    if (roleResult.Succeeded)
+                    {
+                        _logger.LogInformation(1, "Roles adicionadas");
+                        return StatusCode(StatusCodes.Status200OK,
+                            new Response { Status = "Sucesso", Message = $"Role {roleName} adicionado com sucesso" });
+                    }
+                    else
+                    {
+                        _logger.LogInformation(2, "Erro");
+                        return StatusCode(StatusCodes.Status400BadRequest,
+                            new Response { Status = "Erro", Message = "Role ja existe." });
+                    }
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status400BadRequest,
+                        new Response { Status = "Erro", Message = "Role ja existe." });
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro durante a criação da role: {ex.Message}");
+            }
+
+        }
+
+        [HttpPost]
+        [Route("AdicionaUsuarioNaToRole")]
+        public async Task<IActionResult> AddUserToRole(string email, string roleName)
+        {
+            try
+            {
+                var user  = await _userManager.FindByEmailAsync(email);
+                if (user != null)
+                {
+                    var result = await _userManager.AddToRoleAsync(user, roleName);
+                    if (result.Succeeded)
+                    {
+                        _logger.LogInformation(1, $"User {user.Email} adicionado para {roleName} role");
+                        return StatusCode(StatusCodes.Status200OK,
+                            new Response { Status = "Sucesso", Message = $"Usuario {user.Email} adicionado para o {roleName} role" });
+                    }else
+                    {
+                        _logger.LogInformation(1, $"Erro: não é possível adicionar usuário {user.Email} para o {roleName} role");
+                        return StatusCode(StatusCodes.Status400BadRequest,
+                                new Response { Status = "Error", Message = $"Erro: não é possível adicionar usuário {user.Email} para o {roleName} role" });
+                    }
+                }else
+                    {
+                        return BadRequest(new { error = "Não foi possível encontrar o usuário" });
+                    }
+                }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro durante a adesão da role: {ex.Message}");
+            }
         }
 
         [HttpPost]
@@ -39,7 +112,9 @@ namespace ClienteVendaApi.Controllers
                     var userRoles = await _userManager.GetRolesAsync(user);
                     var authClaims = new List<Claim>  // criados para definir o token de autenticação
                     {
+                        new Claim(ClaimTypes.Name, user.UserName!),
                         new Claim(ClaimTypes.Email, user.Email!),
+                        new Claim("id", user.UserName!),
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     };
                     foreach (var userRole in userRoles) // para cada perfil um user role
@@ -62,6 +137,7 @@ namespace ClienteVendaApi.Controllers
                 }else
                 {
                     return Unauthorized();  
+                    //return Forbid(); //403-> tem token mas não esta autorizado
                 }
 
             }catch(Exception ex)

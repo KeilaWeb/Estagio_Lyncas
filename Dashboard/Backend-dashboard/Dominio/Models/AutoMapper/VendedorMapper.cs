@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Dominio.Models.DTO;
+using Dominio.Models.Entities;
+using Dominio.Models.ViewModelVendedor;
 
 namespace Dominio.Models.AutoMapper
 {
@@ -7,7 +9,8 @@ namespace Dominio.Models.AutoMapper
     {
         public VendedorMapper() 
         {
-            CreateMap<VendedorDTO, VendedorDTO>().ReverseMap();
+            CreateMap<Vendedor, ClienteDTO>().ReverseMap();
+            CreateMap<RegistroModel, Vendedor>().ReverseMap();
         }
     }
 }
