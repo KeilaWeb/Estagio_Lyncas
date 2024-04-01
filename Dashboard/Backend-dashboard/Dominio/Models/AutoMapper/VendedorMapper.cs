@@ -10,7 +10,8 @@ namespace Dominio.Models.AutoMapper
         public VendedorMapper() 
         {
             CreateMap<Vendedor, ClienteDTO>().ReverseMap();
-            CreateMap<RegistroModel, Vendedor>().ReverseMap();
+            CreateMap<VendedorBusca, Vendedor>().ReverseMap();
+            CreateMap< ClienteDTO, VendedorBusca>().ReverseMap();
         }
     }
 }

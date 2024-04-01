@@ -15,6 +15,7 @@ using System.Text;
 using Dominio.Models.ApplicationUser;
 using Service.TokenService;
 using Microsoft.OpenApi.Models;
+using Repository.TokenRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,11 +31,12 @@ builder.Services.AddControllers();
 builder.Services.AddControllers();
 builder.Services.AddScoped<IGenericRepository<Cliente>, GenericRepository<Cliente>>();
 builder.Services.AddScoped<IGenericRepository<Venda>, GenericRepository<Venda>>();
+builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
+builder.Services.AddScoped<IVendaRepository, VendaRepository>();
+builder.Services.AddScoped<ITokenRepository, TokenRepository>();
 builder.Services.AddScoped<IGenericService<Venda, VendaDTO, Venda>, GenericService<Venda, VendaDTO, Venda>>();
 builder.Services.AddScoped<IGenericService<Cliente, ClienteDTO, Cliente>, GenericService<Cliente, ClienteDTO, Cliente>>();
-builder.Services.AddScoped<IVendaRepository, VendaRepository>();
 builder.Services.AddScoped<IVendaService, VendaService>();
-builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IGenericService, ClienteService>();
 builder.Services.AddScoped <ITokenService, TokenService>();
 
@@ -77,7 +79,7 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:8080")
+        builder.WithOrigins("http://localhost:8080", "https://localhost:44345")
                .AllowAnyHeader()
                .AllowAnyMethod();
     });

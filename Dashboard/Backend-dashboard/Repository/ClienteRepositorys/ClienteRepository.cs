@@ -9,9 +9,7 @@ namespace Repository.ClienteRepositorys
     public class ClienteRepository : GenericRepository<Cliente>, IClienteRepository
     {
         public ClienteRepository(AplicacaoDbContext context) : base(context)
-        { 
-
-        }
+        {         }
 
         public async Task<(List<Cliente>, int)> PaginarClientesRepo(Paginacao paginacao)
         {

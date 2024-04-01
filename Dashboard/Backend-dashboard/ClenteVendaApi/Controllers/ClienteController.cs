@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Service.ClienteServices;
 
-namespace ClenteVendaApi.Controllers
+namespace ClienteVendaApi.Controllers
 {
-
     [Authorize]
     [Route("api/clientes")]
     [ApiController]
