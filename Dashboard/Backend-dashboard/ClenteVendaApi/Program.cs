@@ -13,9 +13,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Dominio.Models.ApplicationUser;
-using Service.TokenService;
 using Microsoft.OpenApi.Models;
 using Repository.TokenRepository;
+using Service.AuthService.RolesServices;
+using Service.AuthService.AuthService;
+using Service.AuthService.Cadastro;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -33,12 +35,14 @@ builder.Services.AddScoped<IGenericRepository<Cliente>, GenericRepository<Client
 builder.Services.AddScoped<IGenericRepository<Venda>, GenericRepository<Venda>>();
 builder.Services.AddScoped<IClienteRepository, ClienteRepository>();
 builder.Services.AddScoped<IVendaRepository, VendaRepository>();
-builder.Services.AddScoped<ITokenRepository, TokenRepository>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 builder.Services.AddScoped<IGenericService<Venda, VendaDTO, Venda>, GenericService<Venda, VendaDTO, Venda>>();
 builder.Services.AddScoped<IGenericService<Cliente, ClienteDTO, Cliente>, GenericService<Cliente, ClienteDTO, Cliente>>();
 builder.Services.AddScoped<IVendaService, VendaService>();
 builder.Services.AddScoped<IGenericService, ClienteService>();
-builder.Services.AddScoped <ITokenService, TokenService>();
+builder.Services.AddScoped <IAplicationUserService, AplicationUserService>();
+builder.Services.AddScoped<IRolesService, RolesService>();
+builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 
 builder.Services.AddAutoMapper(typeof(Venda));
 builder.Services.AddAutoMapper(typeof(Cliente));

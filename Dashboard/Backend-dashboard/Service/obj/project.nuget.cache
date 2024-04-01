@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ti5CoY9mFFXijgOdyHMTjxG8TfrLNgzO78OFSmPeYBoAlfrgRXjHO0FmW68M796NSIQF7MJ6rMDh8Ld8dKthkg==",
+  "dgSpecHash": "G3r6jmWQtNC6aBhy+23NBRVCNtfCpDxvBxBQRiqYS/3jr0YMOHZSHmGLQ5dg9Sobv6PHxeVgNWVkaie2swnlig==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

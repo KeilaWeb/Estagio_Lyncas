@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\ClienteVendaApi.csproj": {}
+    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\ClienteVendaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\ClienteVendaApi.csproj": {
+    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\ClienteVendaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\ClienteVendaApi.csproj",
+        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\ClienteVendaApi.csproj",
         "projectName": "ClienteVendaApi",
-        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\ClienteVendaApi.csproj",
+        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\ClienteVendaApi.csproj",
         "packagesPath": "C:\\Users\\Lyncas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\obj\\",
+        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,14 +33,14 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj"
               },
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj"
               },
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj"
               }
             }
           }
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj": {
+    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj",
         "projectName": "Dominio",
-        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj",
+        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj",
         "packagesPath": "C:\\Users\\Lyncas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\obj\\",
+        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -245,14 +245,14 @@
         }
       }
     },
-    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj": {
+    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj",
         "projectName": "Repository",
-        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj",
+        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj",
         "packagesPath": "C:\\Users\\Lyncas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\obj\\",
+        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -274,8 +274,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj"
               }
             }
           }
@@ -337,14 +337,14 @@
         }
       }
     },
-    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj": {
+    "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\Lyncas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Service\\obj\\",
+        "outputPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -366,11 +366,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Dominio\\Dominio.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Dominio\\Dominio.csproj"
               },
-              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\Repository\\Repository.csproj"
+              "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\Repository\\Repository.csproj"
               }
             }
           }

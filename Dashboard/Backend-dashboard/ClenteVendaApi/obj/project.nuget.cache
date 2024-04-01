@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SxyYTRi6l8WG1ywiuJAUEnU3cPnxRCwXm15qOWVsVlfHfAYaWNKVc0dmeFWsau4Ngcf+vS9RLKn+a/MT2u6wkw==",
+  "dgSpecHash": "pkuPIscWPl4z2RsYBlJqm0veePRHoSTZIilBkn4txE9guqm1AFmIUmZf+sO1sRRNqg4XfWgMj2b3LhgqRnVsQA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Desafios-estagio\\Dashboard\\Backend-dashboard\\ClenteVendaApi\\ClienteVendaApi.csproj",
+  "projectFilePath": "C:\\Users\\Lyncas\\OneDrive\\Documentos\\LYNCAS\\Projeto\\Backend\\ClenteVendaApi\\ClienteVendaApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Lyncas\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
